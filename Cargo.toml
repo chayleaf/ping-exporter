@@ -1,0 +1,24 @@
+[package]
+name = "ping-exporter"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+authors = ["chayleaf <chayleaf-cratesio@pavluk.org>"]
+description = "A ping exporter for Prometheus with network namespace support"
+repository = "https://github.com/chayleaf/ping-exporter"
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.2"
+clap = { version = "4.4.11", features = ["derive"] }
+dashmap = "5.5.3"
+env_logger = "0.10.1"
+log = "0.4.20"
+netns-rs = "0.1.0"
+serde = { version = "1.0.193", features = ["derive"] }
+socket2 = "0.5.5"
+surge-ping = "0.8.0"
+tokio = { version = "1.35.0", features = ["rt-multi-thread", "macros", "fs", "sync"] }
+toml = "0.8.8"
